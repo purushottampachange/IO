@@ -1,0 +1,46 @@
+
+.movieCard figure {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  margin: 0;
+}
+
+.movieCard figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movieCard .titleInfo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #686161;
+  color: white;
+  padding: 5px;
+}
+
+.movieCard .overview {
+  position: absolute;
+  top: 30%;
+  height: 70%;
+  background-color:#ededed;
+  width: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+
+.movieCard :hover .overview {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.titleInfo h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
