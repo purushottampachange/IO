@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ProdDashComponent } from './prod-dash/prod-dash.component';
+import { ProdCardComponent } from './prod-card/prod-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     MovieDashComponent,
     MovieCardComponent,
     PostDashComponent,
+    ProdDashComponent,
+    ProdCardComponent,
   ],
   imports: [
     BrowserModule,

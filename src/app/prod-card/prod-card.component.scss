@@ -1,0 +1,36 @@
+.image-container {
+  height: 300px;
+  width: 100%;
+
+  > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .noImg {
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.notAvailable{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.NoProd{
+
+    filter: blur(2px);
+}

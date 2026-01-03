@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div
+        [ngClass]="{
+          NoProd: !mobiledata.isAvailable
+        }"
+        class="card-body"
+      >
+        <div class="row">
+          <div class="col-md-3">
+            <div class="image-container">
+              <img
+                *ngIf="mobiledata.image; else noImg"
+                [src]="mobiledata.image"
+                [alt]="mobiledata.name"
+                [title]="mobiledata.name"
+              />
+              <ng-template #noImg>
+                <p class="noImg">No Image</p>
+              </ng-template>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h3>
+              {{ mobiledata.name }}
+              <small
+                class="badge"
+                [ngClass]="{
+                  'badge-success': mobiledata.rating > 4,
+                  'badge-warning':
+                    mobiledata.rating > 3 && mobiledata.rating <= 4,
+                  'badge-danger': mobiledata.rating < 3
+                }"
+                >{{ mobiledata.rating }}</small
+              >
+            </h3>
+            <h5 class="text-muted">Features</h5>
+            <ul class="list-group list-group-flush">
+              <li *ngFor="let f of mobiledata.features" class="list-group-item">
+                {{ f }}
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6>
+              {{ mobiledata.price | currency }}
+              <br />
+              <small>
+                <del>
+                  {{ mobiledata.price + mobiledata.price * 0.15 | currency }}
+                </del>
+              </small>
+            </h6>
+            <br />
+            <p class="text-danger" *ngIf="mobiledata.noOfItems < 10">
+              {{ mobiledata.noOfItems }} left only !!!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div 
+       *ngIf="mobiledata.isAvailable"
+      class="d-flex justify-content-end mb-3">
+        <button mat-raised-button class="mr-5" color="primary">Buy Now</button>
+        <button mat-raised-button class="mr-5" color="accent">Add To Cart</button>
+      </div>
+      <strong class="notAvailable" *ngIf="!mobiledata.isAvailable">
+        Product is Not Available
+      </strong>
+    </div>
+  </div>
+</div>
