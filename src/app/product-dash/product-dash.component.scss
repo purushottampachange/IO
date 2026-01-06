@@ -1,7 +1,95 @@
+/* Navbar brand image */
+.navbar-brand img {
+  height: 35px;
+}
 
-.carousel-inner{
+/* Nav links base style */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #212121;
+  margin: 0 8px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
 
-     height: 300px;
-     width: 100%;
-     object-fit: cover;
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  background-color: #e3f2fd;
+  color: #2874f0;
+}
+
+/* Active link underline */
+.navbar-nav .nav-item.active .nav-link {
+  color: #2874f0;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item.active .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #2874f0;
+}
+
+/* Mobile view spacing */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    margin: 6px 0;
+  }
+}
+
+/* Flipkart-style search container */
+.fk-search {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Search input */
+.fk-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #212121;
+}
+
+/* Placeholder color */
+.fk-search-input::placeholder {
+  color: #878787;
+}
+
+/* Search button */
+.fk-search-btn {
+  background-color: #2874f0;
+  border: none;
+  padding: 0 18px;
+  height: 100%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.fk-search-btn:hover {
+  background-color: #1b5fd1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .fk-search {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
