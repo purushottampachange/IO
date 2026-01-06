@@ -12,6 +12,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ProdDashComponent } from './prod-dash/prod-dash.component';
 import { ProdCardComponent } from './prod-card/prod-card.component';
+import { TudoDashComponent } from './tudo-dash/tudo-dash.component';
+import { TudoListComponent } from './tudo-list/tudo-list.component';
+import { TudoFormComponent } from './tudo-form/tudo-form.component';
+import { FormsModule } from '@angular/forms';
+import { GetConfirmComponent } from './get-confirm/get-confirm.component';
+import { ProductDashComponent } from './product-dash/product-dash.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -22,6 +31,12 @@ import { ProdCardComponent } from './prod-card/prod-card.component';
     PostDashComponent,
     ProdDashComponent,
     ProdCardComponent,
+    TudoDashComponent,
+    TudoListComponent,
+    TudoFormComponent,
+    GetConfirmComponent,
+    ProductDashComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +44,9 @@ import { ProdCardComponent } from './prod-card/prod-card.component';
     MatButtonModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MatCardModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

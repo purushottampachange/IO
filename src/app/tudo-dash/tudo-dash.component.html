@@ -1,0 +1,16 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <app-tudo-form
+      [getEditTudo]="editTudo"
+      (EmitUpdateTudo)="getUpdateObj($event)"
+      (EmitNewTudo)="getNewTudo($event)"
+    ></app-tudo-form>
+  </div>
+  <div class="col-md-6">
+    <app-tudo-list
+      (emitEditTudo)="getEditTudo($event)"
+      (emitRemoveID)="getRemoveId($event)"
+      [getArr]="tudoArr"
+    ></app-tudo-list>
+  </div>
+</div>

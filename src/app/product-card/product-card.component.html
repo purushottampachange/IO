@@ -1,0 +1,35 @@
+<mat-card class="product-card">
+  <img
+    mat-card-image
+    [src]="product.image_url"
+    alt="product image"
+  />
+
+  
+  <mat-card-content>
+    <h3 class="title" matTooltip="{{ product.title }}">
+      {{ product.title | slice:0:55 }}...
+    </h3>
+
+    <p class="brand">Brand: {{ product.brand }}</p>
+
+    <div class="rating">
+      <mat-icon color="warn">star</mat-icon>
+      <span>{{ product.rating }}</span>
+      <small>({{ product.reviews_count }})</small>
+    </div>
+
+    <div class="price">
+      <span class="final">${{ product.final_price }}</span>
+      <span class="initial">${{ product.initial_price }}</span>
+      <span class="discount">{{ product.discount }}</span>
+    </div>
+
+    <p class="availability">{{ product.availability }}</p>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary">Add to Cart</button>
+    <button mat-stroked-button color="accent">View</button>
+  </mat-card-actions>
+</mat-card>

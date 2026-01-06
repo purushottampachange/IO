@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-body">
+    <form #tudoForm="ngForm" (ngSubmit)="onTudoAdd()">
+      <div class="form-group">
+        <label for="tudoItem">Enter Tudo</label>
+        <input
+          required
+          ngModel
+          name="tudoItem"
+          type="text"
+          class="form-control"
+          id="tudoItem"
+        />
+      </div>
+      <button
+        *ngIf="!IsEditMode"
+        class="btn btn-block"
+        mat-raised-button
+        color="primary"
+      >
+        Add Tudo
+      </button>
+      <button
+       (click) = "onUpdateTudo()"
+        type="button"
+        *ngIf="IsEditMode"
+        class="btn btn-block"
+        mat-raised-button
+        color="primary"
+      >
+        Update Tudo
+      </button>
+    </form>
+  </div>
+</div>
